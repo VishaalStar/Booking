@@ -56,17 +56,17 @@ function Calendar({
         day_range_middle:
           "aria-selected:bg-accent aria-selected:text-accent-foreground",
         day_hidden: "invisible",
-        ...classNames, // Merged custom class names
+        ...classNames,
       }}
       components={{
-        IconLeft: ({ className, ...props }) => (
-          <ChevronLeft className={cn("h-4 w-4", className)} {...props} />
+        IconLeft: ({ className }) => (
+          <ChevronLeft className={cn("h-4 w-4", className)} />
         ),
-        IconRight: ({ className, ...props }) => (
-          <ChevronRight className={cn("h-4 w-4", className)} {...props} />
+        IconRight: ({ className }) => (
+          <ChevronRight className={cn("h-4 w-4", className)} />
         ),
       }}
-      {...props} // Pass other props (like date, mode, etc.)
+      {...props}
     />
   )
 }
